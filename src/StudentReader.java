@@ -38,6 +38,20 @@ public class StudentReader {
         }
         return students;
     }
+    public List<String> getStudentList() {
+        List<String> students = new ArrayList<>();
+        students.add("Alice");
+        students.add("Bob");
+        students.add("Charlie");
+        return students;
+    }
+    public void printStudents() {
+        List<String> students = getStudentList();
+        System.out.println("List of students:");
+        for (String student : students) {
+            System.out.println(student);
+        }
+    }
 
     public static void main(String[] args) {
         StudentReader reader = new StudentReader();
@@ -47,5 +61,7 @@ public class StudentReader {
         for (Student student : students) {
             System.out.println(student);
         }
+        StudentReader reader2 = new StudentReader();
+        reader.printStudents();
     }
 }
